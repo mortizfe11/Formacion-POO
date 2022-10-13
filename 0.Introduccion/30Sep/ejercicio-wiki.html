@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-ejercicio-wiki.css">
+    <title>Wikipedia</title>
+</head>
+<body>
+    <!--
+
+        Vamos a reproducir una página estilo Wikipedia
+        Ejemplo: https://en.wikipedia.org/wiki/HTML
+
+        Elementos a reproducir (lo demás se ignora):
+        - Título del tema
+        - Texto descriptivo del tema
+        - Lista de contenidos (1, 2, 3)
+        - Panel lateral con imagen y algunos datos relevantes del tema
+        - Al menos una sección con contenido enlazado (enlace interno)
+
+    -->
+    <h1>HTML</h1>
+    <div class="container">
+        <div id="left">
+            <div class="txt-corpus">From Wikipedia, the free encyclopedia
+                    <blockquote>
+                        <p>".htm" and ".html" redirect here. For other uses, see HTM.</p>
+                        <p>For the use of HTML on Wikipedia, see Help:HTML in wikitext.</p>
+                    </blockquote>
+
+                    <p>The <strong>HyperText Markup Language</strong> or <strong>HTML</strong> is the standard <a href="#">markup language</a>
+                    for documents designed to be displayed in a <a href="#"></a>web browser</a>. It can be assisted by technologies such as 
+                    Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+
+                    <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia
+                    web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the 
+                    document.</p> 
+
+                    <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive
+                    forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural 
+                    semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags,
+                    written using angle brackets. Tags such as <mark>&lt;<b>img</b>/&gt;</mark> and <mark>&lt;<b>input</b>/&gt;</mark> 
+                    directly introduce content into the page. Other tags such as <mark>&lt;<b>p</b>&gt;</mark> surround and provide information
+                    about document text and may include other tags as sub-elements. Browsers do not display the HTML tags but use them to 
+                    interpret the content of the page.</p>
+
+                    <p>HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web 
+                    pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer 
+                    of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML
+                    since 1997.[2] A form of HTML, known as HTML5, is used to display video and audio, primarily using the
+                    <mark>&lt;<b>canvas</b>&gt;</mark> element, in collaboration with javascript. </p>
+            </div>
+
+            <div id="content-links" class="contenidos">
+                <h4>Tabla de contenidos</h4>
+                <ol>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#development">Development</a></li>
+                    <li><a href="#html-version">HTML versions timeline</a></li>
+                </ol>
+            </div>
+
+            <section id="history" class="txt-corpus"><h2>History</h2>
+                <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers 
+                to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee
+                specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer
+                Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN.
+                In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia 
+                first.</p> 
+            </section>
+
+
+            <section id="development" class="txt-corpus"><h2>Dev</h2>
+                <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers 
+                to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee
+                specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer
+                Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN.
+                In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia 
+                first.</p> 
+            </section>
+
+            <section id="html-version" class="txt-corpus"><h2>HTML versions timeline</h2>
+                <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers 
+                to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee
+                specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer
+                Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN.
+                In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia 
+                first.</p> 
+                <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers 
+                to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee
+                specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer
+                Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN.
+                In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia 
+                first.</p> 
+                <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers 
+                to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee
+                specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer
+                Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN.
+                In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia 
+                first.</p> 
+                <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers 
+                to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee
+                specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer
+                Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN.
+                In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia 
+                first.</p> 
+            </section>
+
+        </div>
+        <div id="right">        
+            <h4>HTML <br>(HyperText Markup Language)</h4>
+            <div class="contenidos">
+                <div id="img-html"><img src="./../28Sep/1.portafolio/html.png" alt="HTML5 logo"></div>
+                <small>The official logo of the latest version, HTML5[1]</small>
+                <table>
+                    <tr><th>Filename extension</th>	
+                        <td>.html
+                        .htm</td>
+                    </tr>                    
+                    <tr></tr><th>Internet media type</th>	
+                    <td>text/html</td></tr>
+                    <tr><th> code</th>	<td>TEXT</td></tr>
+                    <tr><th>Uniform Type Identifier (UTI)</th>	<td>public.html</td></tr>
+                    <tr><th>Developed</th> <td>by	WHATWG</td></tr>
+                    <tr><th>Initial release</th>	<td>1993; 29 years ago</td></tr>
+                    <tr><th>Latest release</th>	<td>Living Standard
+                    2022</td></tr>
+                    <tr><th>Type of format</th>	<td>Document file format</td></tr>
+                    <tr><th>Container for</th>	<td>HTML elements</td></tr>
+                    <tr><th>Contained by</th>	<td> browser</td></tr>
+                    <tr><th>Extended from</th>	<td>SGML</td></tr>
+                    <tr><th>Extended to</th>	<td>XHTML</td></tr>
+                    <tr><th>Open format?</th>	<td>Yes</td></tr>
+                    <tr><th>Website</th>	<td>html.spec.whatwg.org</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
