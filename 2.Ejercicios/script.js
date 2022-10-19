@@ -2,6 +2,7 @@
 //let txtdescrip = document.getElementsByClassName("descripcion")[0].textContent
 var x = null;
 var y = null;
+const firstdescrip = document.getElementsByClassName("descripcion")[0].textContent;
 
 function calcular(){
 
@@ -9,9 +10,8 @@ function calcular(){
     y = document.getElementById("y").valueAsNumber;
     if (isNaN(x)) x = 3;
     if (isNaN(y)) y = 10;
-    let firstdescrip = document.getElementsByClassName("descripcion")[0];
 
-    firstdescrip.innerHTML += 
+    document.getElementsByClassName("descripcion")[0].innerHTML = firstdescrip +  
     `<p>Los valores son x: ${x}  y: ${y}</p>
     <p>Suma: x + y = ${x+y}</p>
     <p>Resta: x - y = ${x-y} </p>
