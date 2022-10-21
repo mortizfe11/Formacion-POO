@@ -1,0 +1,53 @@
+/* Hoja de estilos del Navbar Responsive */
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: rgb(50, 50, 50); 
+}
+/* 
+    #menu para colocar el navbar en la página
+        #menu-items para estilar el bloque que contiene los enlaces
+            .menu-item para dar estilo a los enlaces
+        #bg-image para colocar una imagen de fondo
+*/
+#menu {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100vw;
+    height: 100vh;
+}
+#menu-items {
+    border: 1px dashed lightgray;
+    z-index: 2;
+    margin: 1rem 2rem;
+}
+.menu-item {
+    padding: 0.5em 0;
+    font-size: 3rem;
+}
+#bg-image {
+    background-image: url(background.jpg);
+    background-position: center center;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+#dot-pattern{
+    background: #545454;
+    background-position: 0% 0%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
