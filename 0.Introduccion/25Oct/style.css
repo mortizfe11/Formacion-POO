@@ -1,0 +1,132 @@
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+body {
+    background-color: rgba(16, 214, 214, 0.505);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #902926;
+    /* color: rgb(104, 55, 55); */
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+
+.etiqueta {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80vw;
+    margin: 0 auto 20px auto;
+    font-family: 'Open Sans', sans-serif;
+}
+pre {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(181, 181, 181, 0.853);
+    width: 90%;
+    margin: 10px auto;
+    border: 0px solid black;
+}
+pre code {
+    display: inline-block;
+}
+
+mark {
+    text-decoration: underline;
+}
+meter {
+    width: 50vw;
+    display: block;
+    height: 1.5em;
+}
+progress {
+    display: block;
+    width: 50vw;
+    height: 1.25em;
+}
+details summary {
+    border: 2px solid brown;
+    background-color: rgba(222, 184, 135, 1);
+    box-shadow: 2px 2px 2px burlywood;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    margin: 10px auto;
+}
+details p {
+    background-color: rgba(222, 184, 135, 0.7);
+    border: 2px solid brown;
+    border-top: 0;
+    padding: 10px;
+    margin: -10px auto 10px auto;
+    width: 90%;
+    box-shadow: 2px 2px 2px burlywood;
+}
+
+dialog {
+    background-color: antiquewhite;
+    width: 50%;
+}
+#radio-btn {
+    border: 2px solid brown;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0;
+}
+legend {
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+#radio-btn label, #checkboxes label {
+    display: inline-block;
+    border: 1px solid brown;
+    min-width: 50vw;
+    width: 70vw;
+    margin: 10px 0;
+}
+#radio-btn input, #checkboxes input {
+    display: inline-block;
+    width: 5vw;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* Estos estilos no son 100% compatibles entre navegadores */
+select optgroup {
+    background-color: white;
+    font-weight: 600;
+    opacity: 1;
+    color: black;
+}
+
+.copy-icon{
+    margin: 0.05em;
+    padding: 10px; 
+    height:auto; 
+    align-self: flex-start;
+    cursor: pointer;
+}

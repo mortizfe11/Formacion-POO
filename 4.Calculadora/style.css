@@ -1,0 +1,16 @@
+
+/****** CALCULADORA ******/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.grid-container > div{
+    text-align: center;
+}
+
+.grid-header {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }

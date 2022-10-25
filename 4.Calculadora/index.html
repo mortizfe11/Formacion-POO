@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calculadora</h3>
+    <div><p>Aquí vamos a tener la calculadora</p>
+        <p id="calculadora"></p>
+        <!-- Necesitamos tener un botón para cada número. Añadiendo la 
+        opción de borrar, dividir, multiplicar, restar y sumar. 
+    
+            De querer mostrar lo escrito se hará por string. 
+            Dos clases: Operador + Numero
+            Operador: 
+                — tipo de operador
+                — ToString
+            Numero:
+                — tipo de número
+                — ToString
+        -->
+        <div class="grid-container">
+            <!-- con contenteditable el usuario puede modificar el contenido. -->
+            <div class="grid-header"><p contenteditable="true">Aquí se escribe</p></div>
+            <div class="grid-item" id="open-bracket" name="open-bracket" onclick="">(</div>
+            <div class="grid-item" id="closen-bracket" name="closen-bracket" onclick="">)</div>  
+            <div class="grid-item" id="mod" name="mod" onclick="">%</div>
+            <div class="grid-item" id="del" name="del" onclick="">AC</div>
+            <div class="grid-item" id="seven" name="" onclick="">7</div>
+            <div class="grid-item" id="eight" name="" onclick="">8</div>
+            <div class="grid-item" id="nine" name="" onclick="">9</div>  
+            <div class="grid-item" id="div" name="" onclick="">/</div>
+            <div class="grid-item" id="four" name="" onclick="">4</div>
+            <div class="grid-item" id="five" name="" onclick="">5</div>
+            <div class="grid-item" id="six" name="" onclick="">6</div>  
+            <div class="grid-item" id="mul" name="" onclick="">x</div>  
+            <div class="grid-item" id="one" name="" onclick="">1</div>
+            <div class="grid-item" id="two" name="" onclick="">2</div>
+            <div class="grid-item" id="three" name="" onclick="">3</div>  
+            <div class="grid-item" id="sub" name="" onclick="">-</div>  
+            <div class="grid-item" id="zero" name="" onclick="">0</div>
+            <div class="grid-item" id="point-decimal" name="" onclick="">.</div>
+            <div class="grid-item" id="eql" name="" onclick="">=</div>  
+            <div class="grid-item" id="sum" name="" onclick="">+</div>  
+          </div>
+
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

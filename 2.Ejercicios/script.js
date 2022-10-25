@@ -83,3 +83,36 @@ function division(nombre){
     } // escribir el número es igual a cero. 
 }
 
+
+    // Calculamos IVA como el 21% del parámetro precioBase
+    //iva *= precioBase;
+    // Calculamos el precioFinal como la suma de precioBase más IVA
+    //let precioFinal = precioBase + iva;
+    // Retornamos o devolvemos el precioFinal calculado
+
+function calcularPrecioFinal(precioBase, iva = 0.21){
+    return (precioBase + precioBase * iva).toFixed(2);
+}
+
+function escribirIdEjercicio(idEjercicio,texto, valor, unidades){
+    if(typeof(valor) == Number) valor = string(valor);
+    document.getElementById(idEjercicio).innerText = texto + valor + unidades;
+}
+
+function ejercicios(){
+    let arr1 = [0.21, 0.10, 0.4];
+    let precio = 200, count = 1;
+    let txt = "El precio calculado es: ", unidades= " €";
+
+    for (let iva of arr1) {
+        txt = "El valor precio es: "+ precio + " y el Iva es: "+ iva + "\n" + txt;
+        escribirIdEjercicio("ejercicio-"+count, txt, calcularPrecioFinal(precio, iva), unidades);
+        count++;
+    }
+}
+
+function calcularDesglose(precioTotal, iva= 0.21){
+    let precioBase = (precioTotal / (1 + iva)).toFixed(2);
+    let precioIva = precioTotal - precioBase;
+    return [precioBase, precioIva];
+}
