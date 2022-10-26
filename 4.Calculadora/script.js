@@ -16,6 +16,9 @@ function calcDiv(x, y){
 function calcMod(x, y){
     return x % y;
 }
+function calcSqrt(x, y){
+    return Math.sqrt(x);
+}
 
 function textCalcSum(x, y){
     return `<p>x + y = ${calcSum(x, y)}</p>`;
@@ -26,23 +29,29 @@ function textCalcSub(x, y){
 function textCalcMult(x, y){
     return `<p>x * y = ${calcMult(x, y)}</p>`;
 }
+function textCalcMod(x, y){
+    return `<p>x % y = ${calcMod(x, y)}</p>`;
+}
 function textCalcDiv(x, y){
     let temp = calcDiv(x, y);
     if(isNaN(temp)) return `<p>y = 0. No es posible dividir</p>`;
     else return `<p>x / y = ${temp}</p>`;
 }
+function textCalcSqrt(x, y){
+    return `<p>x % y = ${calcMod(x, y)}</p>`;
+}
 
 function calcular(){
     let x, y, operation, element;
     let nombre = "resultado";
-    let obj = {"all": "Todas", "sum": "Suma", "sub": "Resta", "mul": "Multiplicación", "div": "División"} 
+    let obj = {"all": "Todas", "sum": "Suma", "sub": "Resta", "mul": "Multiplicación", "div": "División", "mod": "Modal"} 
     x = document.getElementById("x").valueAsNumber;
     y = document.getElementById("y").valueAsNumber;
     operation = document.getElementById("operation").value;
     element = `<p>Los valores son x: ${x}  y: ${y}. La operación escogida es: ${obj[operation]}</p>`
     switch(operation){
         case "all": 
-            element+= textCalcSum(x,y) + textCalcSub(x,y) + textCalcMult(x,y) + textCalcDiv(x,y);
+            element+= textCalcSum(x,y) + textCalcSub(x,y) + textCalcMult(x,y) + textCalcDiv(x,y) + textCalcMod(x, y);
             document.getElementById(nombre).innerHTML = element;      
             break;
         case "sum": 
@@ -59,6 +68,10 @@ function calcular(){
             break;
         case "mul": 
             element+= textCalcMult(x,y);
+            document.getElementById(nombre).innerHTML = element;                             
+            break;
+        case "mod": 
+            element+= textCalcMod(x,y);
             document.getElementById(nombre).innerHTML = element;                             
             break;
     }

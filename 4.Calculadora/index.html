@@ -12,18 +12,23 @@
         <section>
             <h3>Calculadora</h3>
             <div id="calculadora">
-                <label for="x">Inserte el valor de x: <input id="x" name="x" type="number"></label>
-                <label for="y">Inserte el valor de y: <input id="y" name="y" type="number"></label>
-                <label for="operation">Seleccione su operación: <select id="operation">
-                    <option value="all" selected>Todas</option>
-                    <option value="sum">Sumar</option>
-                    <option value="sub">Restar</option>
-                    <option value="div">Dividir</option>
-                    <option value="mul">Multiplicar</option>
-                </select></label>
-                <button id="calcular" onclick="calcular()">Calcular</button>
+                <div id="resultado"></div>
+                <div id="opciones">
+                    <label for="x">Inserte el valor de x: <input id="x" name="x" type="number"></label>
+                    <label for="y">Inserte el valor de y: <input id="y" name="y" type="number"></label>
+                    <label for="operation">Seleccione su operación: <select id="operation">
+                        <option value="all" selected>Todas</option>
+                        <option value="sum">Sumar</option>
+                        <option value="sub">Restar</option>
+                        <option value="div">Dividir</option>
+                        <option value="mul">Multiplicar</option>
+                        <option value="mod">Modal</option>
+                        <!--<option value="sqrt">Raíz Cuadrada</option>
+                        <option value="log">Logaritmo 10</option>-->
+                    </select></label>
+                    <button id="calcular" onclick="calcular()">Calcular</button>
+                </div>
             </div>
-            <div id="resultado"></div>
         </section>
         <section>
             <h3>Calculadora avanzada</h3>

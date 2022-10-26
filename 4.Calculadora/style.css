@@ -2,7 +2,8 @@
 :root{
     --clr-bckg: #222;
     --clr-text: #fff;
-    --border: 1px solid #04AA6D;
+    --clr-green: #04AA6D;
+    --border: 1px solid var(--clr-green);
 }
 
 body, main{
@@ -14,9 +15,22 @@ label{
     margin: 0.5em 0;
     color: var(--clr-text);
 }
+#calculadora{
+    display: flex;
+}
+#resultado{
+    width: 60%;
+    height: 250px;
+}
+#opciones{
+    margin: 0em 2em;
+}
 
 span{
     margin-left: 0.5em;
+}
+h3{
+    color: var(--clr-green);
 }
 
 section{
@@ -37,7 +51,7 @@ section{
     gap: 10px;
 }
 
-.grid-container > div, button, input, select{
+.grid-container > div, button, input, select, #resultado{
     text-align: center;
     background: var(--clr-bckg);
     color: var(--clr-text);
