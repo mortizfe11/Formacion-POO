@@ -8,9 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Calculadora</h3>
-    <div><p>Aquí vamos a tener la calculadora</p>
-        <p id="calculadora"></p>
+    <main>        
+        <section>
+            <h3>Calculadora</h3>
+            <div id="calculadora">
+                <label for="x">Inserte el valor de x: <input id="x" name="x" type="number"></label>
+                <label for="y">Inserte el valor de y: <input id="y" name="y" type="number"></label>
+                <label for="operation">Seleccione su operación: <select id="operation">
+                    <option value="all" selected>Todas</option>
+                    <option value="sum">Sumar</option>
+                    <option value="sub">Restar</option>
+                    <option value="div">Dividir</option>
+                    <option value="mul">Multiplicar</option>
+                </select></label>
+                <button id="calcular" onclick="calcular()">Calcular</button>
+            </div>
+            <div id="resultado"></div>
+        </section>
+        <section>
+            <h3>Calculadora avanzada</h3>
+
         <!-- Necesitamos tener un botón para cada número. Añadiendo la 
         opción de borrar, dividir, multiplicar, restar y sumar. 
     
@@ -23,33 +40,33 @@
                 — tipo de número
                 — ToString
         -->
-        <div class="grid-container">
-            <!-- con contenteditable el usuario puede modificar el contenido. -->
-            <div class="grid-header"><p contenteditable="true">Aquí se escribe</p></div>
-            <div class="grid-item" id="open-bracket" name="open-bracket" onclick="">(</div>
-            <div class="grid-item" id="closen-bracket" name="closen-bracket" onclick="">)</div>  
-            <div class="grid-item" id="mod" name="mod" onclick="">%</div>
-            <div class="grid-item" id="del" name="del" onclick="">AC</div>
-            <div class="grid-item" id="seven" name="" onclick="">7</div>
-            <div class="grid-item" id="eight" name="" onclick="">8</div>
-            <div class="grid-item" id="nine" name="" onclick="">9</div>  
-            <div class="grid-item" id="div" name="" onclick="">/</div>
-            <div class="grid-item" id="four" name="" onclick="">4</div>
-            <div class="grid-item" id="five" name="" onclick="">5</div>
-            <div class="grid-item" id="six" name="" onclick="">6</div>  
-            <div class="grid-item" id="mul" name="" onclick="">x</div>  
-            <div class="grid-item" id="one" name="" onclick="">1</div>
-            <div class="grid-item" id="two" name="" onclick="">2</div>
-            <div class="grid-item" id="three" name="" onclick="">3</div>  
-            <div class="grid-item" id="sub" name="" onclick="">-</div>  
-            <div class="grid-item" id="zero" name="" onclick="">0</div>
-            <div class="grid-item" id="point-decimal" name="" onclick="">.</div>
-            <div class="grid-item" id="eql" name="" onclick="">=</div>  
-            <div class="grid-item" id="sum" name="" onclick="">+</div>  
-          </div>
+            <div class="grid-container" id="advCalculadora">
+                <!-- con contenteditable el usuario puede modificar el contenido. -->
+                <div class="grid-header"><p contenteditable="true">Aquí se escribe</p></div>
+                <div class="grid-item" id="open-bracket" name="open-bracket" onclick="">(</div>
+                <div class="grid-item" id="closen-bracket" name="closen-bracket" onclick="">)</div>  
+                <div class="grid-item" id="mod" name="mod" onclick="">%</div>
+                <div class="grid-item" id="del" name="del" onclick="">AC</div>
+                <div class="grid-item" id="seven" name="seven" onclick="">7</div>
+                <div class="grid-item" id="eight" name="eight" onclick="">8</div>
+                <div class="grid-item" id="nine" name="nine" onclick="">9</div>  
+                <div class="grid-item" id="div" name="div" onclick="">/</div>
+                <div class="grid-item" id="four" name="four" onclick="">4</div>
+                <div class="grid-item" id="five" name="five" onclick="">5</div>
+                <div class="grid-item" id="six" name="six" onclick="">6</div>  
+                <div class="grid-item" id="mul" name="mul" onclick="">x</div>  
+                <div class="grid-item" id="one" name="one" onclick="">1</div>
+                <div class="grid-item" id="two" name="two" onclick="">2</div>
+                <div class="grid-item" id="three" name="three" onclick="">3</div>  
+                <div class="grid-item" id="sub" name="sub" onclick="">-</div>  
+                <div class="grid-item" id="zero" name="zero" onclick="">0</div>
+                <div class="grid-item" id="point-decimal" name="point-decimal" onclick="">.</div>
+                <div class="grid-item" id="equal" name="equal" onclick="">=</div>  
+                <div class="grid-item" id="sum" name="sum" onclick="">+</div>  
+            </div>
+        </section>
 
-
-    </div>
+    </main>
     <script src="script.js"></script>
 
 </body>
