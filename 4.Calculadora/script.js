@@ -10,69 +10,54 @@ function calcMult(x, y){
     return x * y;
 }
 function calcDiv(x, y){
-    if (y != 0) return x / y;
+    if (y != 0) return (x / y).toFixed(2);
     else return NaN;
 }
 function calcMod(x, y){
     return x % y;
 }
-function calcSqrt(x, y){
+function calcSqrt(x){
     return Math.sqrt(x);
 }
 
-function textCalcSum(x, y){
-    return `<p>x + y = ${calcSum(x, y)}</p>`;
-}
-function textCalcSub(x, y){
-    return `<p>x - y = ${calcSub(x, y)}</p>`;
-}
-function textCalcMult(x, y){
-    return `<p>x * y = ${calcMult(x, y)}</p>`;
-}
-function textCalcMod(x, y){
-    return `<p>x % y = ${calcMod(x, y)}</p>`;
-}
-function textCalcDiv(x, y){
-    let temp = calcDiv(x, y);
-    if(isNaN(temp)) return `<p>y = 0. No es posible dividir</p>`;
-    else return `<p>x / y = ${temp}</p>`;
-}
-function textCalcSqrt(x, y){
-    return `<p>x % y = ${calcMod(x, y)}</p>`;
+function calcAll(x, y){
+    return calcSum(x,y) + "\n " + calcSub(x,y) + "\n " +  calcMult(x, y) + "\n" + calcDiv(x,y) + "\n"
+    + calcMod(x,y) + "\n";
+    
 }
 
+
+function escribirResultado(resultado, nombre){
+    document.getElementById(nombre).innerText = resultado;
+}
+
+
+
 function calcular(){
-    let x, y, operation, element;
-    let nombre = "resultado";
-    let obj = {"all": "Todas", "sum": "Suma", "sub": "Resta", "mul": "Multiplicación", "div": "División", "mod": "Modal"} 
+    let x, y, operation;
+    let nombre = "resultado"; 
     x = document.getElementById("x").valueAsNumber;
     y = document.getElementById("y").valueAsNumber;
     operation = document.getElementById("operation").value;
-    element = `<p>Los valores son x: ${x}  y: ${y}. La operación escogida es: ${obj[operation]}</p>`
+    //operation = document.getElementById("operation").options["selectedIndex"];
     switch(operation){
         case "all": 
-            element+= textCalcSum(x,y) + textCalcSub(x,y) + textCalcMult(x,y) + textCalcDiv(x,y) + textCalcMod(x, y);
-            document.getElementById(nombre).innerHTML = element;      
+            escribirResultado(calcAll(x, y), nombre);           
             break;
         case "sum": 
-            element+= textCalcSum(x,y);
-            document.getElementById(nombre).innerHTML = element;             
+            escribirResultado(calcSum(x,y), nombre);           
             break;
         case "sub":
-            element+= textCalcSub(x,y);
-            document.getElementById(nombre).innerHTML = element;                            
+            escribirResultado(calcSub(x,y), nombre);                             
             break;
         case "div": 
-            element+= textCalcDiv(x,y);
-            document.getElementById(nombre).innerHTML = element;                             
+            escribirResultado(calcDiv(x,y), nombre);                            
             break;
         case "mul": 
-            element+= textCalcMult(x,y);
-            document.getElementById(nombre).innerHTML = element;                             
+        escribirResultado(calcMult(x,y), nombre);                                
             break;
         case "mod": 
-            element+= textCalcMod(x,y);
-            document.getElementById(nombre).innerHTML = element;                             
+        escribirResultado(calcMod(x,y), nombre);                                 
             break;
     }
 }
