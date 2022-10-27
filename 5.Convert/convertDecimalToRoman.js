@@ -73,12 +73,12 @@ function procesarArray(arr){
                 }else if(val < (9 * unidades) && val > (4 * unidades)){ // de 8 a 5.
                     str+=simboloRomano(5 * unidades); 
                     let numRepeat = arr[i] - 5; //numero de veces
-                    let temp = val/numRepeat;
-                    str+=simboloRomano(temp).repeat(numRepeat);
+                    let temp = (numRepeat * unidades)/numRepeat; 
+                    str+=String(simboloRomano(temp)).repeat(numRepeat);
                 }else{ // inferior a 4: del 3 al 1.
                     let numRepeat = arr[i]; //numero de veces
                     let temp = val/numRepeat;
-                    str+=simboloRomano(temp).repeat(numRepeat);
+                    str+=String(simboloRomano(temp)).repeat(numRepeat);
                 } 
             }
 
