@@ -1,6 +1,8 @@
 function convertir(){
     let num = document.getElementById("myInputA").valueAsNumber;
-    document.getElementById("resultados").innerText = procesarArray(descomponer(num));
+    let res = document.getElementById("resultados");
+    if(num < 4000 && num > 0) res.innerText = procesarArray(descomponer(num));
+    else res.innerText = "No es posible procesar ese número";
 }
 
 /**
@@ -68,22 +70,20 @@ function procesarArray(arr){
             else{ //si no lo encuentra definido.
                 //Si es divisible por 9 o por 4: será símbolo por unidades
                 if(val / (9 * unidades) == 1 || val / (4 * unidades) == 1) { // 9 o 4.
-                    str+=simboloRomano(unidades)+ simboloRomano(val+unidades);
+                    str+=simboloRomano(unidades) + simboloRomano(val+unidades);
                 }else{ // de 8 a 5 y 4 a 1. 
                     if(val < (9 * unidades) && val > (4 * unidades)){
                         str+=simboloRomano(5 * unidades);
                         val -= 5 * unidades;
                     }
                     let numRepeat = val / unidades; //numero de veces
-                    let temp = val/numRepeat;
+                    let temp = val / numRepeat;
                     str+=String(simboloRomano(temp)).repeat(numRepeat);
                 } 
             }
-
         }
     }
     return str;
-
 }
 
 
