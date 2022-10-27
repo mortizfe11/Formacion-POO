@@ -58,7 +58,6 @@ function simboloRomano(num){
 function procesarArray(arr){
     let str = "";
     let val, unidades;
-
     let list = [1, 5, 10, 50, 100, 500, 1000];
     for (var i = 0; i < arr.length; i++) { 
         if(arr[i] != 0){
@@ -70,13 +69,12 @@ function procesarArray(arr){
                 //Si es divisible por 9 o por 4: será símbolo por unidades
                 if(val / (9 * unidades) == 1 || val / (4 * unidades) == 1) { // 9 o 4.
                     str+=simboloRomano(unidades)+ simboloRomano(val+unidades);
-                }else if(val < (9 * unidades) && val > (4 * unidades)){ // de 8 a 5.
-                    str+=simboloRomano(5 * unidades); 
-                    let numRepeat = arr[i] - 5; //numero de veces
-                    let temp = (numRepeat * unidades)/numRepeat; 
-                    str+=String(simboloRomano(temp)).repeat(numRepeat);
-                }else{ // inferior a 4: del 3 al 1.
-                    let numRepeat = arr[i]; //numero de veces
+                }else{ // de 8 a 5 y 4 a 1. 
+                    if(val < (9 * unidades) && val > (4 * unidades)){
+                        str+=simboloRomano(5 * unidades);
+                        val -= 5 * unidades;
+                    }
+                    let numRepeat = val / unidades; //numero de veces
                     let temp = val/numRepeat;
                     str+=String(simboloRomano(temp)).repeat(numRepeat);
                 } 
