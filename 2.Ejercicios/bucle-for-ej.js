@@ -149,6 +149,16 @@ function trianguloDerecha(num, motivo = '*'){
     console.log(count);
 }
 
+function trianguloConBorde(num, motivoInt = 'x', motivoExt = 'o'){
+    let count = "";
+    for(let i= 1; i <= num; i++){
+        if(i == 1 || i == 2 || i == num) count += motivoExt.repeat(i) + "\n"; 
+        else count+=motivoExt + motivoInt.repeat(i-2) + motivoExt + "\n"; 
+    }
+    console.log(count);
+}
+
+
 function cuadrado(num, motivo = '*'){
     let count = "";
     for(let i= 1; i < num+1; i++){
