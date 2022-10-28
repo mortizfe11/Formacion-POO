@@ -103,3 +103,37 @@ function descomponer(num){
     }
     return arr;
 }
+function convertirDecimal(){
+    let numStr = document.getElementById("myInputB").value;
+    let res = document.getElementById("resultados");/*
+    if(num < 4000 && num > 0) res.innerText = procesarArray(descomponer(num));
+    else res.innerText = "No es posible procesar ese número";*/
+    res.innerText = convertirRomanToDecimal(numStr);
+}
+
+function convertirRomanToDecimal(numStr){
+    let v1, v2, count = 0;
+    //list = ["I", "V", "X", "L", "V", "C", "D", "M"]
+    for(var i=0; i < numStr.length; i++){
+        v1 = simboloDecimal(numStr[i]);
+        if(i+1 != numStr.length){
+            v2 = simboloDecimal(numStr[i+1]);
+            if(v2 > v1) count -= v1;
+            else count +=v1;
+        }else{
+            count +=v1;
+        }
+    }
+    return count;
+}
+
+function simboloDecimal(numStr){
+    if( numStr === "I" ) return 1;
+    else if ( numStr === "V" ) return 5;
+    else if ( numStr === "X" ) return 10;
+    else if ( numStr === "L" ) return 50;
+    else if ( numStr === "C" ) return 100;
+    else if ( numStr === "D" ) return 500;
+    else if ( numStr === "M" ) return 1000;
+    else { return NaN; }
+}

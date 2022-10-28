@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Convertidor Números Fracciones a Decimales</title>
+</head>
+<body>
+    <h1>Convertidor Números Fracciones a Decimales</h1>
+    <main>
+        <div id="conversor-container">
+            <p>Para comprobar las salidas ingresa <code>100</code>, <code>900</code>, <code>2022</code> y <code>121</code>.</p>
+            <div>
+                <label for="resultados">Resultados:</label>
+                <div id="resultados-div">
+                    <p id="resultados"></p>
+                </div>
+                <label for="decimales">Elije el número de decimales para el resultado:</label>
+                <select id="decimales">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <label for="myInputA">Introduce los valores de la fracción:</label>
+                <input id="myInputA" type="number"  placeholder="1">
+                <hr>
+                <input id="myInputB" type="number"  placeholder="2">
+
+                <button id="conversor-btn" onclick="convertir()">Convertir Dec</button>  
+                <button id="conversor-btn2" onclick="convertirFrac()">Convertir Frac</button>  
+
+                <button id="delete-btn" onclick="borrarCampos()">Borrar</button>  
+            </div>
+        </div>
+    </main>
+    <script src="convertFractoDec.js"></script>
+</body>
+</html>
