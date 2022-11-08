@@ -1,8 +1,8 @@
 function convertir(){
     let num = document.getElementById("myInputA").valueAsNumber;
     let res = document.getElementById("resultados");
-    if(num < 4000 && num > 0) res.innerText = procesarArray(num);
-    else res.innerText = "No es posible procesar ese número";
+    //operador ternario:  condición ? si es true : si es false
+    num < 4000 && num > 0 ? res.innerText = procesarArray(num) : res.innerText = "No es posible procesar ese número";
 }
 
 function setMap(){
@@ -55,9 +55,8 @@ function setMap(){
  */
 
 function procesarArray(num){
-    let arr = descomponer(num);
-    let str = "";
-    let val, unidades;
+    let arr = descomponer(num); //da el array descompuesto.
+    let val, unidades, str = "";
     let map = setMap(); //lista con los números en keys y el signo romano en values.
     for (var i = 0; i < arr.length; i++) { 
         if(arr[i] != 0){
