@@ -58,7 +58,7 @@ function setMap(){
 /**
  * Devuelve string a partir de pasarle el array de las unidades. 
  * 
- * @param {array de cuatro elementos M C D U} arr 
+ * @param {array de siete elementos MM CM DM M C D U} arr 
  */
 
 function procesarArray(num){
@@ -119,10 +119,12 @@ function convertirDecimal(){
 function convertirRomanToDecimal(numStr){
     let v1, v2, count = 0;
     //list = ["I", "V", "X", "L", "V", "C", "D", "M"]
+    let map = setMapDecimal();
+    //
     for(var i=0; i < numStr.length; i++){
-        v1 = simboloDecimal(numStr[i]);
+        v1 = map.get(numStr[i]);
         if(i+1 != numStr.length){
-            v2 = simboloDecimal(numStr[i+1]);
+            v2 = map.get(numStr[i+1]);
             if(v2 > v1) count -= v1;
             else count +=v1;
         }else{
@@ -131,14 +133,13 @@ function convertirRomanToDecimal(numStr){
     }
     return count;
 }
-
-function simboloDecimal(numStr){
-    if( numStr === "I" ) return 1;
-    else if ( numStr === "V" ) return 5;
-    else if ( numStr === "X" ) return 10;
-    else if ( numStr === "L" ) return 50;
-    else if ( numStr === "C" ) return 100;
-    else if ( numStr === "D" ) return 500;
-    else if ( numStr === "M" ) return 1000;
-    else { return NaN; }
+function setMapDecimal(){
+    return new Map()
+    .set("I", 1)
+    .set("V", 5)
+    .set("X", 10)
+    .set("L", 50)
+    .set("C", 100)
+    .set("D", 500)
+    .set("M", 1000)
 }
