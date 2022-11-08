@@ -2,7 +2,7 @@ function convertir(){
     let num = document.getElementById("myInputA").valueAsNumber;
     let res = document.getElementById("resultados");
     //operador ternario:  condición ? si es true : si es false
-    num < 4000 && num > 0 ? res.innerText = procesarArray(num) 
+    num < 4000000 && num > 0 ? res.innerText = procesarArray(num) 
     : res.innerText = "No es posible procesar ese número";
 }
 
@@ -14,7 +14,13 @@ function setMap(){
     .set(50, "L")
     .set(100, "C")
     .set(500, "D")
-    .set(1000, "M");
+    .set(1000, "M")
+    .set(5000, "v̄")
+    .set(10000, "x̄")
+    .set(50000, "l̄")
+    .set(100000, "c̄")
+    .set(500000, "d̄")
+    .set(1000000, "m̄")
 }
 
  /*Algoritmo: 
@@ -90,8 +96,8 @@ function procesarArray(num){
  * 
  */
 function descomponer(num){
-    //         M  C  D  U
-    let arr = [0, 0, 0, 0];
+    //        MM CM DM  M  C  D  U
+    let arr = [0, 0, 0, 0, 0, 0, 0];
     let numStr = String(num); 
     let len = numStr.length; // 1, 2, 3, 4
 
