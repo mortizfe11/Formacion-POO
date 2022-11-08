@@ -1,23 +1,19 @@
 function convertir(){
     let num = document.getElementById("myInputA").valueAsNumber;
     let res = document.getElementById("resultados");
-    if(num < 4000 && num > 0) res.innerText = procesarArray(descomponer(num));
+    if(num < 4000 && num > 0) res.innerText = procesarArray(num);
     else res.innerText = "No es posible procesar ese número";
 }
 
-/**
- * 
- * 
- */
-function simboloRomano(num){
-    if( num === 1 ) { return "I" } 
-    else if ( num === 5 )   { return "V"; } 
-    else if ( num === 10 )  { return "X"; } 
-    else if ( num === 50 )  { return "L"; }
-    else if ( num === 100 ) { return "C"; }
-    else if ( num === 500 ) { return "D"; }
-    else if ( num === 1000 ){ return "M"; }
-    else { return NaN; }
+function setMap(){
+    return new Map()
+    .set(1, "I")
+    .set(5, "V")
+    .set(10, "X")
+    .set(50, "L")
+    .set(100, "C")
+    .set(500, "D")
+    .set(1000, "M");
 }
 
  /*Algoritmo: 
@@ -51,34 +47,36 @@ function simboloRomano(num){
 
             }*/
 
+
 /**
  * Devuelve string a partir de pasarle el array de las unidades. 
  * 
  * @param {array de cuatro elementos M C D U} arr 
  */
 
-function procesarArray(arr){
+function procesarArray(num){
+    let arr = descomponer(num);
     let str = "";
     let val, unidades;
-    let list = [1, 5, 10, 50, 100, 500, 1000];
+    let map = setMap(); //lista con los números en keys y el signo romano en values.
     for (var i = 0; i < arr.length; i++) { 
         if(arr[i] != 0){
             unidades = 10**(arr.length-1-i); //multiplica por 1000 si es M, 100 si es C, 10 si es D y 1 si es U.
             val = arr[i] * unidades; 
             //si encuentra el valor en la lista
-            if(list.includes(val)) str += simboloRomano(val);
+            if(map.has(val)) str += map.get(val);
             else{ //si no lo encuentra definido.
                 //Si es divisible por 9 o por 4: será símbolo por unidades
                 if(val / (9 * unidades) == 1 || val / (4 * unidades) == 1) { // 9 o 4.
-                    str+=simboloRomano(unidades) + simboloRomano(val+unidades);
+                    str += map.get(unidades) + map.get(val+unidades);
                 }else{ // de 8 a 5 y 4 a 1. 
                     if(val < (9 * unidades) && val > (4 * unidades)){
-                        str+=simboloRomano(5 * unidades);
+                        str += map.get(5 * unidades);
                         val -= 5 * unidades;
                     }
                     let numRepeat = val / unidades; //numero de veces
                     let temp = val / numRepeat;
-                    str+=String(simboloRomano(temp)).repeat(numRepeat);
+                    str += String(map.get(temp)).repeat(numRepeat);
                 } 
             }
         }
@@ -97,12 +95,14 @@ function descomponer(num){
     let numStr = String(num); 
     let len = numStr.length; // 1, 2, 3, 4
 
-    if(len < 4) numStr = '0'.repeat(arr.length-len) +numStr; //si la longitud es inferior a 4, rellena con ceros. 
+    if(len < 4) numStr = '0'.repeat(arr.length-len) + numStr; //si la longitud es inferior a 4, rellena con ceros. 
     for(var i = 0; i < arr.length; i++){
         arr[i] = Number(numStr[i]);
     }
     return arr;
 }
+
+
 function convertirDecimal(){
     let numStr = document.getElementById("myInputB").value;
     let res = document.getElementById("resultados");/*
