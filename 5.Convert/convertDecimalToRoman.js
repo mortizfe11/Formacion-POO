@@ -6,6 +6,17 @@ function convertir(){
     : res.innerText = "No es posible procesar ese número";
 }
 
+function setMap(){
+    return new Map()
+    .set(1, "I")
+    .set(5, "V")
+    .set(10, "X")
+    .set(50, "L")
+    .set(100, "C")
+    .set(500, "D")
+    .set(1000, "M");
+}
+
  /*Algoritmo: 
                 switch(i){
                     case 0: // millares else{
@@ -47,8 +58,7 @@ function convertir(){
 function procesarArray(num){
     let arr = descomponer(num); //da el array descompuesto.
     let val, unidades, str = "";
-    let map = new Map({1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M'}); //lista con los números en keys y el signo romano en values.
-    
+    let map = setMap(); //lista con los números en keys y el signo romano en values.
     for (var i = 0; i < arr.length; i++) { 
         if(arr[i] != 0){
             unidades = 10**(arr.length-1-i); //multiplica por 1000 si es M, 100 si es C, 10 si es D y 1 si es U.
