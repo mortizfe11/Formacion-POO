@@ -37,29 +37,14 @@ function calcular(){
     operation = document.getElementById("operation").value;
     res = document.getElementById("resultado");
     //operation = document.getElementById("operation").options["selectedIndex"];
-    switch(operation){
-        case "sum": 
-            res.innerHTML = x + y;        
-            break;
-        case "sub":
-            res.innerHTML = x - y;                        
-            break;
-        case "div": 
-            res.innerHTML = y != 0 ? (x / y).toFixed(2) : (alert("No se puede dividir por 0"), NaN);                         
-            break;
-        case "mul": 
-            res.innerHTML = x * y;                          
-            break;
-        case "mod": 
-            res.innerHTML = x % y;                      
-            break;    
-        case "sqrt": 
-            res.innerHTML = x > 0 ? Math.sqrt(x) : (alert("La raíz quadrada no acepta negativos"), NaN);                       
-            break;
-        case "log": 
-            res.innerHTML = x > 0 ? Math.log(x) : (alert("El logaritmo no acepta negativos"), NaN);                             
-            break;
-    }
+    res.innerHTML = operation == "sum" ? x + y :
+        operation == "sub" ? x - y :
+        operation == "div " ? y != 0 ? (x / y).toFixed(2) : (alert("No se puede dividir por 0"), NaN) :
+        operation == "mul" ? x * y :
+        operation == "mod" ? x % y :
+        operation == "sqrt" ? x > 0 ? Math.sqrt(x) : (alert("La raíz quadrada no acepta negativos"), NaN) :
+        operation == "log" ? x > 0 ? Math.log(x) : (alert("El logaritmo no acepta negativos"), NaN) :
+        ""
 }
 
 function selectOperation(){
