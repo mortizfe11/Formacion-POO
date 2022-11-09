@@ -15,15 +15,15 @@
                 <div id="resultado"></div>
                 <label for="x">X: <input id="x" name="x" type="number"></label>
                 <label for="y">Y: <input id="y" name="y" type="number"></label>
-                <label for="operation">Seleccione su operación: <select id="operation">
-                    <option value="all" selected>Todas</option>-
+                <label for="operation">Seleccione su operación: <select id="operation" onchange="selectOperation()">
+                    <!--<option value="all" selected>Todas</option>-->
                     <option value="sum" selected>Sumar</option>
                     <option value="sub">Restar</option>
                     <option value="div">Dividir</option>
                     <option value="mul">Multiplicar</option>
                     <option value="mod">Modal</option>
-                        <!--<option value="sqrt">Raíz Cuadrada</option>
-                        <option value="log">Logaritmo 10</option>-->
+                    <option value="sqrt">Raíz Cuadrada</option>
+                    <option value="log">Logaritmo 10</option>
                 </select></label>
                 <button id="calcular" onclick="calcular()">Calcular</button>
             </div>

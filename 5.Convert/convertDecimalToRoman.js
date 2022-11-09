@@ -118,7 +118,6 @@ function convertirDecimal(){
 
 function convertirRomanToDecimal(numStr){
     let v1, v2, count = 0;
-    //list = ["I", "V", "X", "L", "V", "C", "D", "M"]
     let map = setMapDecimal();
     //
     for(var i=0; i < numStr.length; i++){

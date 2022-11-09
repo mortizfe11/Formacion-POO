@@ -1,5 +1,4 @@
-var oper = '*'
-
+/*
 function calcSum(x, y){
     return x + y;
 }
@@ -29,35 +28,49 @@ function calcAll(x, y){
 
 function escribirResultado(resultado, nombre){
     document.getElementById(nombre).innerText = resultado;
-}
-
-
+}*/
 
 function calcular(){
-    let x, y, operation;
-    let nombre = "resultado"; 
+    let x, y, operation, res;
     x = document.getElementById("x").valueAsNumber;
     y = document.getElementById("y").valueAsNumber;
     operation = document.getElementById("operation").value;
+    res = document.getElementById("resultado");
     //operation = document.getElementById("operation").options["selectedIndex"];
     switch(operation){
-        case "all": 
-            escribirResultado(calcAll(x, y), nombre);           
-            break;
         case "sum": 
-            escribirResultado(calcSum(x,y), nombre);           
+            res.innerHTML = x + y;        
             break;
         case "sub":
-            escribirResultado(calcSub(x,y), nombre);                             
+            res.innerHTML = x - y;                        
             break;
         case "div": 
-            escribirResultado(calcDiv(x,y), nombre);                            
+            res.innerHTML = y != 0 ? (x / y).toFixed(2) : (alert("No se puede dividir por 0"), NaN);                         
             break;
         case "mul": 
-        escribirResultado(calcMult(x,y), nombre);                                
+            res.innerHTML = x * y;                          
             break;
         case "mod": 
-        escribirResultado(calcMod(x,y), nombre);                                 
+            res.innerHTML = x % y;                      
+            break;    
+        case "sqrt": 
+            res.innerHTML = x > 0 ? Math.sqrt(x) : (alert("La raíz quadrada no acepta negativos"), NaN);                       
+            break;
+        case "log": 
+            res.innerHTML = x > 0 ? Math.log(x) : (alert("El logaritmo no acepta negativos"), NaN);                             
             break;
     }
+}
+
+function selectOperation(){
+    let y, operation;
+    y = document.getElementById("y");
+    operation = document.getElementById("operation").value;
+
+    if(operation == "sqrt" || operation == "log"){
+        y.setAttribute('disabled', '');
+        y.value = '';
+
+    }
+    else y.removeAttribute('disabled');
 }
