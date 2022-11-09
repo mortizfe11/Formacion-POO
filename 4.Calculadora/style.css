@@ -10,41 +10,37 @@ body, main{
     background: var(--clr-bckg);
 }
 
-label{
-    display: block;
+#calculadora > label{
     margin: 0.5em 0;
     color: var(--clr-text);
 }
 #calculadora{
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
-
-button, #resultado, label{
-    width: 100%;
+#calculadora #resultado{
+    grid-column: 1 / 5;
+    grid-row: 1; 
+    padding: 3em;
 }
-
-
-#resultado{
-    height: 50px;
-}
-#opciones{
+/*
+#calculadora #opciones{
     margin: 0em 2em;
 }
 
-span{
+#calculadora span{
     margin-left: 0.5em;
-}
+}*/
 h3{
     color: var(--clr-green);
 }
 
 section{
-    width: 60vh;
-    margin: 2em auto;
+    max-width: 60vw;
+    margin: 5em auto;
     padding: 1.5em;
     background: var(--clr-bckg);
     color: var(--clr-text);
@@ -71,8 +67,7 @@ section{
 }
 
 .grid-header {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column: 1 / 5;
 }
 
 #advCalculadora .grid-item:active, #advCalculadora .grid-header:active{
