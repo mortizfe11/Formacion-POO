@@ -36,12 +36,13 @@ function calcular(){
     y = document.getElementById("y").valueAsNumber;
     operation = document.getElementById("operation").value;
     res = document.getElementById("resultado");
-    //operation = document.getElementById("operation").options["selectedIndex"];
+    //operation = document.getElementById("operation").options["selectedIndex"];git
     res.innerHTML = operation == "sum" ? x + y :
         operation == "sub" ? x - y :
-        operation == "div " ? y != 0 ? (x / y).toFixed(2) : (alert("No se puede dividir por 0"), NaN) :
+        operation == "div" ? y != 0 ? (x / y).toFixed(6) : (alert("No se puede dividir por 0"), NaN) :
         operation == "mul" ? x * y :
         operation == "mod" ? x % y :
+        operation == "pow" ? Math.pow(x, y) :
         operation == "sqrt" ? x > 0 ? Math.sqrt(x) : (alert("La raíz quadrada no acepta negativos"), NaN) :
         operation == "log" ? x > 0 ? Math.log(x) : (alert("El logaritmo no acepta negativos"), NaN) :
         ""
@@ -55,7 +56,6 @@ function selectOperation(){
     if(operation == "sqrt" || operation == "log"){
         y.setAttribute('disabled', '');
         y.value = '';
-
     }
     else y.removeAttribute('disabled');
 }
