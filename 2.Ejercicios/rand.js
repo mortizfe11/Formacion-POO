@@ -1,4 +1,4 @@
-generarRand = (N, nMax = 53) => {
+generarRandInteger = (N, nMax = 53) => {
     if(N <= nMax){
         let set = new Set();
         while(set.size != N)
@@ -9,13 +9,20 @@ generarRand = (N, nMax = 53) => {
     }
 }
 
+generarRandFloat = (N, nMax = 53, decimals=2) => {
+    let set = new Set();
+    while(set.size != N)
+        set.add(Number((Math.random()*nMax).toFixed(decimals)));
+    return Array.from(set);
+}
+
+//Promediar Notas
 promediarNotas = (arr, fixed = 2) => {
     let count = 0;
-    arr.forEach(element => {
-        count+=element;
-    });
-    return (count/ arr.length).toFixed(fixed);
+    arr.forEach(element => count+=element);
+    return (count / arr.length).toFixed(fixed);
 }
+//Promediar Notas con weight
 promediarNotasPesos = (arr, arrPesos, fixed = 2) => {
     let count = 0, weight = 0;
     if(arr.length == arrPesos.length){
