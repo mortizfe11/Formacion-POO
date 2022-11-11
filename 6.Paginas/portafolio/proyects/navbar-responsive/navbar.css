@@ -32,7 +32,7 @@ body {
     font-size: 3rem;
 }
 #bg-image {
-    background-image: url(navbar-background.jpg);
+    background-image: url(./assets/img/navbar-background.jpg);
     background-position: center center;
     left: 0;
     width: 100vw;
