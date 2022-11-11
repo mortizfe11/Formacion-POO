@@ -16,21 +16,33 @@ generarRandFloat = (N, nMax = 53, decimals=2) => {
     return Array.from(set);
 }
 
+generarRandPeso = (N, nMax = 1) => {
+    let arr = [];
+    while(arr.length != N)
+        arr.push(Math.ceil(Math.random()*nMax));
+    return arr;
+}
+
 //Promediar Notas
 promediarNotas = (arr, fixed = 2) => {
-    let count = 0;
-    arr.forEach(element => count+=element);
-    return (count / arr.length).toFixed(fixed);
+    //let count = 0;
+    let count = arr.reduce((a, b) => a + b, 0);
+    //arr.forEach(element => count+=element);
+    return Number((count / arr.length).toFixed(fixed));
 }
 //Promediar Notas con weight
 promediarNotasPesos = (arr, arrPesos, fixed = 2) => {
     let count = 0, weight = 0;
     if(arr.length == arrPesos.length){
-        for(let i = 0; i < arr.length; i++){
-            count+=arr[i]*arrPesos[i];
+/*
+        let count = arr.reduce((prevVal, currVal, i) => {prevVal*arrPesos[] + currVal
+            weight = arrPesos[i];
+        }, 0);/*/
+        arr.forEach((val, i) => {
+            count+=val*arrPesos[i];
             weight+=arrPesos[i];
-        };
-        return (count / weight).toFixed(fixed);
+        });
+        return Number((count / weight).toFixed(fixed));
     }else{
         return "El tamaño de los arrays no es el mismo";
     }

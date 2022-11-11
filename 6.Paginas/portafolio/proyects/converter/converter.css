@@ -65,8 +65,8 @@ ul {
 }
 /* #resultados-wrapper */
 #conversor-container div {
-    width: 300px;
-    max-width: 400px;
+    width: 400px;
+    max-width: 550px;
     margin: 0 auto;
     background-color: rgba(222, 184, 135, 0.865);
 }
@@ -147,15 +147,15 @@ hr {
 }
 
 /* Media Query */
-
+/*
 @media (width > 800px){
     #conversor-container div {
         max-width: 450px;
         padding: 15px;
     }
 }
-@media (width < 800px){
+@media screen and (width < 800px){
     #resultados {
         font-size: 2em;
     }
-}
+}*/

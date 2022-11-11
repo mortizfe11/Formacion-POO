@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>César P. | Desarrollador Web | Portafolio Web</title>
+    <link rel="icon" href="favicon.png"> <!-- Colocad PNG con transparencia -->
+    <!-- Bootstrap 5.2.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Fontawesome v6 -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- Hoja personalizada -->
+    <link rel="stylesheet" href="portafolio.css">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+    
+      <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="bi me-2" src="img/logo-white.png" width="40" alt="logo">
+                <span>César Patiño</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0 mx-auto">
+                <li class="nav-item mx-5">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item mx-5">
+                    <a class="nav-link" href="#about-me">Acerca de</a>
+                  </li>
+                <li class="nav-item mx-5">
+                  <a class="nav-link" href="#portfolio">Portafolio</a>
+                </li>
+                <li class="nav-item mx-5">
+                  <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    
+    <!-- Banner o Hero banner o Slider -->
+    <section id="hero-banner">
+        <div class="container col-xxl-8 px-4 py-5 border-bottom">
+            <div class="row flex-lg-row align-items-center g-5 pt-5 pb-2">
+                <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 my-3">Portafolio de César Patiño</h1>
+                <p class="lead my-5">El diseño web es una forma de arte digital en el mundo contemporáneo.</p>
+
+                <div class="justify-content-md-start">
+                    <a href="#portfolio" class="btn btn-primary btn-md px-md-2 me-md-2">Ver proyectos</a>
+                </div>
+                </div>
+                <div class="col-10 col-sm-10 col-lg-6 mx-auto">
+                    <img src="./img/hero-banner.png" class="d-block mx-lg-auto img-fluid rounded" alt="hero-banner" width="700" height="500" loading="lazy">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- About me ? -->
+    <section id="about-me">
+        <div class="container py-5">
+            <div class="row justify-content-center pb-5 px-3 border-bottom">
+                <div class="col-10 col-sm-10 col-lg-6 mb-5 py-2">
+                    <img class="d-block mx-auto img-fluid rounded" src="./img/avatar.png" width="300" alt="avatar">
+                </div>
+                <div class="col-sm-8 col-lg-6 col-xl-4 text-end">
+                    <h2 class="pb-3 display-5">Acerca de mí</h2>
+                    <p class="lead fw-bold fs-4">Desarrollador full-stack</p>
+                    <p class="lead">Llevo más de una década creando web con diversas tecnologías.</p>
+                    <p class="lead">He utilizado varios frameworks de PHP y C#, como Laravel, CodeIgniter, .NET, etc. </p>
+                    <p class="lead">Más reciemtemente, uso React JS y TS con Next para hacer páginas web.</p>
+                </div>
+                <p class="text-center mt-3 lead fw-bold fs-4">Tecnologías que he usado:</p>
+                <div class="col-8 mt-2 py-2 d-flex flex-wrap justify-content-around">
+                    <span class="my-1 badge text-bg-primary">HTML 5</span>
+                    <span class="my-1 badge text-bg-primary">CSS 3</span>
+                    <span class="my-1 badge text-bg-warning">JS</span>
+                    <span class="my-1 badge text-bg-success">SQL</span>
+                    <span class="my-1 badge text-bg-info">SASS</span>
+                    <span class="my-1 badge text-bg-info">Typescript</span>
+                    <span class="my-1 badge text-bg-primary">Python</span>
+                    <span class="my-1 badge text-bg-info">React</span>
+                    <span class="my-1 badge text-bg-success">.Net</span>
+                    <span class="my-1 badge text-bg-info">C#</span>
+                    <span class="my-1 badge bg bg-dark text-light">PHP</span>
+                </div>
+                <div id="portfolio" class="hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cols o Divs o Grid -> Proyectos -->
+    <section id="portfolio-section">
+      <div class="container px-4 pt-0 pb-5 border-bottom" id="custom-cards">
+          <h2 class="pb-2">Proyectos</h2>
+          <p class="lead mt-3">Algunos de los proyectos en los que he trabajado recientemente.</p>
+
+          <!-- Slider -->
+            
+          <div id="carouselExampleCaptions" class="carousel slide py-5" data-bs-ride="carousel" data-bs-touch="true" data-bs-wrap="true">
+            
+            <!-- Botones para navegar entre slides -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            </div>
+            
+            <!-- Contenedor de slides -->
+            <div class="carousel-inner">
+
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+1" class="d-block w-100" alt="slide-1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 1</h5>
+                  <p class="lead">Lorem 1 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 1</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+2" class="d-block w-100" alt="slide-2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 2</h5>
+                  <p class="lead">Lorem 2 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 2</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+3" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 3</h5>
+                  <p class="lead">Lorem 3 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 3</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+4" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 4</h5>
+                  <p class="lead">Lorem 4 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 4</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+5" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 5</h5>
+                  <p class="lead">Lorem 5 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 5</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+6" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 6</h5>
+                  <p class="lead">Lorem 6 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 6</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+7" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 7</h5>
+                  <p class="lead">Lorem 7 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 7</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 8 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+8" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 8</h5>
+                  <p class="lead">Lorem 8 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 8</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 9 -->
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400/000/FFF?text=Slide+9" class="d-block w-100" alt="slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-4">Proyecto 9</h5>
+                  <p class="lead">Lorem 9 ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, aperiam!</p>
+                  <div class="row col-4 my-3 mx-auto">
+                    <a href="#proyectos" class="btn btn-primary px-2 mx-auto">Link a Proyecto 9</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      
+        <!-- Toggler -->
+        <div class="border bg bg-light">
+          <div class="container">
+            <div id="see-more-btn" class="row col-lg col-sm-10 my-5 mx-auto align-items-center justify-content-around">
+
+                <div class="col-lg-8 col-md">
+                  <h3 class="">Mis Proyectos</h3>
+                  <p class="lead">Los proyectos que he realizado en 2022.</p>
+                </div>
+                <div class="col-lg-4 col-md">
+                  <a href="#see-more-btn" class="btn btn-success px-2 py-2 mx-auto"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+                  aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Mostrar proyectos">
+                  Ver todos los proyectos</a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Área colapsable del toggler -> 9 proyectos -->
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-light p-4">
+
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 align-items-center g-5 py-5">
+          
+              <!-- Proyecto 1: Survey Form -->
+              <div id="proyecto-1" class="col mb-5">
+                  <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./img/dark-3.png');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                      <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Survey Form</h3>
+                      <p class="lead">Proyecto de layout con HTML y CSS.</p>
+                      <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                          <li class="d-flex me-2">
+                              <img src="./img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                          </li>
+                          <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
+                              Layout
+                          </li>
+                          <li class="d-flex align-items-center me-2 fw-bold bg bg-dark px-3 rounded">
+                              HTML, CSS
+                          </li>
+                      </ul>
+                  </div>
+                  </div>
+                  <div class="row project-btn col-4 col-sm col-xs my-3 mx-auto">
+                      <a href="./proyects/layouts/survey-form.html" target="_blank" class="btn btn-primary px-2 mx-auto">Survey Form</a>
+                  </div>
+                  
+              </div>
+    
+              <!-- Proyecto 2: Registration Form -->
+              <div id="proyecto-2" class="col mb-5">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Registration Form</h3>
+                  <p class="lead">Formulario de registro con HTML y CSS.</p>
+                  <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                      <li class="d-flex me-1">
+                      <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                      </li>
+                      <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                          Layout
+                      </li>
+                      <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                          Bootstrap
+                      </li>
+                  </ul>
+                  </div>
+              </div>
+                  <div class="row project-btn col-6 my-3 mx-auto">
+                      <a href="./proyects/layouts/registration-form.html" target="_blank" class="btn btn-primary px-2 mx-auto">Registration Form</a>
+                  </div>
+              </div>
+        
+              <!-- Proyecto 3: Tribute Page -->
+              <div id="proyecto-3" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Tribute Page Wikipedia</h3>
+                    <p class="lead">.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            Layout
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="row col-6 my-3 mx-auto">
+                    <a href="./proyects/layouts/tribute-page.html" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">Tribute Page Wikipedia</a>
+                </div>
+              </div>
+    
+              <!-- Proyecto 4. Navbar Responsive -->
+              <div id="proyecto-4" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Navbar Responsive</h3>
+                    <p class="lead">Navbar vertical con efectos.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            HTML
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            CSS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JS
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="./proyects/navbar-responsive/navbar.html" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">NavBar Responsive</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 5: Calculadora -->
+              <div id="proyecto-5" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Calculadora</h3>
+                    <p class="lead">Calculadora simple con JS.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            Javascript
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="./proyects/calculator/calculator.html" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">Calculator</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 6: Conversor Romano -->
+              <div id="proyecto-6" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Conversor Romano</h3>
+                    <p class="lead">Conversor de decimal a romano hasta 3999999. Y de romano a decimal inferior a 4000.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            Javascript
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="./proyects/converter/converter-roman.html" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">Converter Roman</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 7: Generador de Números aleatorios -->
+              <div id="proyecto-7" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Generador de números aleatorios</h3>
+                    <p class="lead">Funciones de generar rands, promediar y promediar números.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            Javascript
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="./proyects/rand-generator/rand-generator.html" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">Random Generator</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 8: jQuery -->
+              <div id="proyecto-8" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 8</h3>
+                    <p class="lead">.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            SASS
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            JQuery
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 8</a>
+                    </div>
+              </div>
+    
+              <!-- Proyecto 9: Componentes de React -->
+              <div id="proyecto-9" class="col mb-5">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/dark-3.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Proyecto 9</h3>
+                    <p class="lead">.</p>
+                    <ul class="d-flex list-unstyled mt-auto justify-content-around">
+                        <li class="d-flex me-1">
+                        <img src="img/logo-white.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-1 fw-bold bg bg-dark px-3 rounded">
+                            React
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                    <div class="row col-6 my-3 mx-auto">
+                        <a href="" target="_blank" class="project-btn btn btn-primary px-2 mx-auto">Link a Proyecto 9</a>
+                    </div>
+              </div>
+    
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Contacto (form) -->
+
+      <!-- <section id="contact">
+        <div class="container col-lg-6 col-md-8 col-sm-10 py-3 mt-3">
+            <form>
+                <h2 class="h3 mb-3 display-6 fw-normal">Contacto</h2>
+            
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="floatingInput1" placeholder="John Doe">
+                    <label for="floatingInput1">Nombre</label>
+                  </div>
+                <div class="form-floating my-3">
+                  <input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+                  <label for="floatingInput2">Email</label>
+                </div>
+                <form class="form-floating my-3">
+                    <input type="email" class="form-control" id="floatingInput3" placeholder="Escribe aquí tu mensaje..." value="">
+                    <label for="floatingInput3">Escribe tu mensaje aquí:</label>
+                  </form>
+            
+                <div class="checkbox mb-3 my-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Acepto los <a href="#">términos y condiciones</a>.
+                  </label>
+                </div>
+                <button class="w-20 btn btn-lg btn-primary my-3" type="submit">Enviar</button>
+                <p class="mt-5 mb-3 text-muted">© César Patiño 2022</p>
+              </form>
+        </div>  
+    </section> -->
+    
+    <section id="contact">
+      <div class="container">
+        <div class="row my-5 px-3 py-3 align-items-center justify-content-center">
+          
+          <div class="col-lg-3 col-xl-4 px-2 mx-1 col-md col-sm order-1 text-center">
+            <a class="btn btn-primary d-inline-block mx-auto"
+            href="mailto:email@dominio.com?subject='Información servicios de desarrollo web&body=Hola, quiero saber más sobre los diseños y páginas web que has creado...'"
+            target="_blank">
+            <i class="far fa-envelope"></i> Enviar e-mail
+            </a>
+          </div>
+
+          <div class="col-lg-7 col-xl-6 px-2 mx-1 col-md col-sm order-0 text-end">
+            <h2>Contacto</h2>
+            <p class="lead">Envíame un mensaje por email.</p>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+    <!-- Footer -->
+    
+    <div class="container-fluid bg bg-dark pt-3 pb-5">
+        
+        <footer class="d-flex flex-wrap justify-content-between col-10 col-sm mx-auto align-items-center pt-3 mt-4">
+            
+          <ul class="d-flex col-sm col-md-10 col-lg-10 col-xl-10 justify-content-center mx-auto my-3 pt-2 px-0">
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Inicio</a></li>
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#about-me" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Acerca de</a></li>
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#portfolio" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Portafolio</a></li>
+            <li class="nav-item rounded py-1 px-1 m-1 small"><a href="#contact" class="nav-link px-4 py-2 border border-secondary rounded text-muted">Contacto</a></li>
+          </ul>
+
+          <a href="#" id="logo" class="nav-link px-5 mx-auto">
+            <img class="bi me-2" src="img/logo-white.png" width="40" alt="logo">
+            <span class="col-md-4 mb-0 text-muted">© 2022 César Patiño</span>
+          </a>
+      
+          <p class="text-muted fw-bold pt-3 col-md-6 col-lg-8 px-5 col-sm mx-auto">Diseño de páginas web a medida con diversos frameworks. Desarrollo Full-stack de platarformas web.</p>
+      
+          
+          <!-- Redes sociales -->
+          <!-- <ul class="d-flex col-sm col-md-8 col-lg-6 col-xl-6 justify-content-around mx-auto my-3">
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+              <li><i class="bi bi-linkedin"></i></li>
+          </ul> -->
+        </footer>
+    </div>
+    
+
+    <script src="portafolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Si vamos a usar Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
+  </body>
+</html>
