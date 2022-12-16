@@ -1,6 +1,6 @@
 INSERT INTO `w3schools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Lácteos', 'Leche y derivados lácteos');
 INSERT INTO `w3schools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Verduras', 'Vegetales frescos');
-INSERT INTO `w3schools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Cafés', 'Cafe molido, cápsulas, etc.');
+INSERT INTO `wchools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Cafés', 'Cafe molido, cápsulas, etc.');
 INSERT INTO `w3schools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Navidad', 'Productos navideños diversos (decoración, adornos, etc.)');
 INSERT INTO `w3schools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Electrónica', 'Ordenadores, periféricos, etc.');
 INSERT INTO `w3schools-sql`.`Categories` (`CategoryName`, `Description`) VALUES ('Bebidas', 'Refrescos con/sin gas');
